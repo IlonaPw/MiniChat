@@ -43,7 +43,7 @@
                     ?>
                     <p style="border-bottom: 2px black dotted;">
                     <?php
-                    echo'<strong>'.htmlspecialchars($donnees['pseudo']).'</strong> :'.htmlspecialchars($donnees['message']);
+                    echo'<strong>'.$donnees['date_creation'].'&nbsp'.htmlspecialchars($donnees['pseudo']).'</strong> :'.htmlspecialchars($donnees['message']);
                     ?>
                     </p>
                     <?php

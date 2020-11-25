@@ -19,7 +19,7 @@ catch(Exception $e)
 if (isset($_POST['pseudo']) && isset($_POST['message']))
 {
     // On ajoute une entrée dans la table minichat
-    $req = $bdd->prepare('INSERT INTO minichat(pseudo, message) VALUES(?, ?)');
+    $req = $bdd->prepare('INSERT INTO minichat(pseudo, message,date_creation) VALUES(?, ?,NOW())');
     $req->execute(array($_POST['pseudo'],$_POST['message']));
     // redirige vers minichat.php
     header('Location: minichat.php');
